@@ -9,7 +9,7 @@ def index(request):
         return HttpResponse("<h2>Hello, {0}</h2>".format(name))
     else:
         data = {"text":"Roflan", 'form' : UserForm()}    
-        return render(request, "home/index.html", context=data)
+        return render(request, "home.html", context=data)
 
     
 def about(request):

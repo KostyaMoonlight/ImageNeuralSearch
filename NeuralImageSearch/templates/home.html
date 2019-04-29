@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% comment %}       
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                
+                </div>
+                <div class="col">
+                    <form method="POST">
+                        {% csrf_token %}  
+                        
+                            {{ form|crispy }}
+                            <input type="submit" value="Send" class="btn btn-success">
+                         
+                    </form>
+                </div>
+                <div class="col">
+                
+                </div>
+            </div>
+            </div> {% endcomment %}
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}
