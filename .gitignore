@@ -1,0 +1,4 @@
+*.drawio
+*.sqlite3
+*bootstrap*
+*__pycache__*
