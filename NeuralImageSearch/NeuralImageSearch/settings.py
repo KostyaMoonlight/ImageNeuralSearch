@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'WebSearch',
     'crispy_forms',
     'accounts.apps.AccountsConfig',
+    'bootstrap4',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -81,12 +82,19 @@ WSGI_APPLICATION = 'NeuralImageSearch.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+      'default': {
+          'ENGINE': 'djongo',
+          'NAME': 'NeuralImageSearch',
+      }
+  }
 
 
 # Password validation
