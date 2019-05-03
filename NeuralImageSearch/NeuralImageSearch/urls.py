@@ -19,14 +19,16 @@ from django.views.generic.base import TemplateView
 from WebSearch import views
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    #path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('', views.index, name='home'),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     
     #path('', views.index, name='home'),
-    path('about', views.about), 
-    path('contact', views.contact),
+    path('upload_product', views.upload_product), 
+    path('view_history', views.view_history),
+    path('view_all_history', views.view_all_history),
     path('products/<int:productid>/', views.products),
     path('users/<int:id>/<name>/', views.users),
 ]

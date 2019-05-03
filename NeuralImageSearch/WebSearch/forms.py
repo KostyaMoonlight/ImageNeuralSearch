@@ -1,6 +1,5 @@
 from django import forms
  
 class UserForm(forms.Form):
-    name = forms.CharField(label="Enter your name:")
-    age = forms.IntegerField(initial=123)
+    info = forms.CharField(label="Add info:")
     image = forms.ImageField()
