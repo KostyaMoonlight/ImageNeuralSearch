@@ -26,9 +26,9 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     
     #path('', views.index, name='home'),
-    path('upload_product', views.upload_product), 
-    path('view_history', views.view_history),
-    path('view_all_history', views.view_all_history),
+    path('upload_product/', views.upload_product), 
+    path('view_history/', views.view_history),
+    path('view_all_history/', views.view_all_history),
     path('products/<int:productid>/', views.products),
     path('users/<int:id>/<name>/', views.users),
 ]
